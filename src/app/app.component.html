@@ -1,0 +1,21 @@
+<div class="ui text container todos-container">
+    <div class="ui segment form">
+        <div class="ui fluid action input">
+            <input type="text" name="title" placeholder="Add todo..." #titleInput>
+            <button type="button" class="ui primary button" (click)="addTodo(titleInput)">Add</button>
+        </div>
+    </div>
+
+    <div class="ui raised segment" [hidden]="todos.length == 0">
+        <div class="ui middle aligned divided selection list">
+            <div class="todo item" *ngFor="let todo of todos">
+                <div class="ui checkbox">
+                    <input id="done" #done type="checkbox" (change)="todo.done = done.checked">
+                    <label for="done" [ngClass]="{selected: todo.done}">{{ todo.title }}</label>
+                </div>
+
+                <button type="button" class="ui red icon button remove-button" (click)="removeTodo(todo)"><i class="trash outline icon"></i></button>
+            </div>
+        </div>
+    </div>
+</div>
