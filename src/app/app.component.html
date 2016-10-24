@@ -6,7 +6,7 @@
         </div>
     </div>
 
-    <div class="ui raised segment" [hidden]="todos.length == 0">
+    <div class="ui raised segment" [hidden]="todos.size == 0">
         <div class="ui middle aligned divided selection list">
             <div class="todo item" *ngFor="let todo of todos">
                 <div class="ui checkbox">
