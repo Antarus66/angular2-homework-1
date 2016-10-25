@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
     selector: "todo-app",
@@ -9,33 +9,6 @@ import { Component } from '@angular/core';
 export class AppComponent {
     constructor() {
        this.title = "Todo list";
-       this.todos = new Set();
+       this.todos = [];
     };
-
-    addTodo(input) {
-        let title = input.value;
-        input.value = '';
-        this.todos.add({
-            title,
-            checked: false,
-
-            get done() {
-                return this.checked;
-            },
-
-            set done(val) {
-                if (val) {
-                    alert('Cool!')
-                } else {
-                    alert('Fool!');
-                }
-
-                this.checked = val;
-            }
-        });
-    }
-
-    removeTodo(todo) {
-        this.todos.delete(todo);
-    }
 }

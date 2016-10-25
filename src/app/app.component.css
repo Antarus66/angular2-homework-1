@@ -3,15 +3,6 @@ h1 {
     font-style: oblique;
 }
 
-#todos-container {
+.todos-container {
     margin: 20px auto;
-}
-
-.selected {
-    text-decoration: line-through;
-    color: #339966;
-}
-
-.remove-button {
-    float: right;
 }
