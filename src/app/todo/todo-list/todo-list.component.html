@@ -11,13 +11,6 @@
             </button>
         </div>
 
-        <div class="todo item" *ngFor="let todo of todos">
-            <div class="ui checkbox">
-                <input [checked]="todo.done" id="done" #done type="checkbox" (change)="todo.done = done.checked">
-                <label for="done" [ngClass]="{selected: todo.done}">{{ todo.title }}</label>
-            </div>
-
-            <button type="button" class="ui red icon button remove-button" (click)="removeTodo(todo)"><i class="trash outline icon"></i></button>
-        </div>
+        <todo-item *ngFor="let todo of todos" [todo]="todo" (deleted)="onTodoDeleted($event)"></todo-item>
     </div>
 </div>

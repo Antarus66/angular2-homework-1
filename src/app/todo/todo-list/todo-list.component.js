@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { Todo } from 'app/todo/todo.model.js';
 
 @Component({
     selector: "todo-list",
@@ -9,7 +8,7 @@ import { Todo } from 'app/todo/todo.model.js';
 })
 
 export class TodoListComponent {
-    removeTodo(todo) {
+    onTodoDeleted(todo) {
         let index = this.todos.indexOf(todo);
 
         if (index > -1) {
