@@ -10,8 +10,11 @@ import { Todo } from 'app/todo/todo.model.js';
 
 export class TodoListComponent {
     constructor() {
-        let todo = new Todo('Simple deal');
-        this.todos = [todo];
+        this.todos = [
+            new Todo('Simple deal', true),
+            new Todo('Complicated deal'),
+            new Todo('Going hard')
+        ];
     };
 
     addTodo(todo) {
@@ -30,9 +33,9 @@ export class TodoListComponent {
         this.todos = [];
     }
 
-    checkAll() {
+    checkAll(value = false) {
         for (let todo of this.todos) {
-            todo.done = true;
+            todo.done = value;
         }
     }
 }
