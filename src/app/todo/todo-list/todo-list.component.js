@@ -9,18 +9,6 @@ import { Todo } from 'app/todo/todo.model.js';
 })
 
 export class TodoListComponent {
-    constructor() {
-        this.todos = [
-            new Todo('Simple deal', true),
-            new Todo('Complicated deal'),
-            new Todo('Going hard')
-        ];
-    };
-
-    addTodo(todo) {
-        this.todos.push(todo);
-    }
-
     removeTodo(todo) {
         let index = this.todos.indexOf(todo);
 
@@ -30,7 +18,7 @@ export class TodoListComponent {
     }
 
     removeAll() {
-        this.todos = [];
+        this.todos.length = 0;
     }
 
     checkAll(value = false) {

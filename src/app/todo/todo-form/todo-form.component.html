@@ -1,1 +1,7 @@
-<div id="form" class="ui segment">No form yet</div>
+<div id="form" class="ui segment">
+    <div class="ui input fluid action">
+        <input type="text" name="title" placeholder="Add todo..."
+               (keyup.enter)="addTodo(titleInput.value); titleInput.value = ''" #titleInput>
+        <button class="ui primary button" (click)="addTodo(titleInput.value); titleInput.value = ''">Add</button>
+    </div>
+</div>

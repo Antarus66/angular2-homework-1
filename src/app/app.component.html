@@ -1,4 +1,4 @@
 <div class="ui text container todos-container">
-    <todo-form></todo-form>
-    <todo-list></todo-list>
+    <todo-form (added)="onTodoAdded($event)"></todo-form>
+    <todo-list [todos]="todos"></todo-list>
 </div>

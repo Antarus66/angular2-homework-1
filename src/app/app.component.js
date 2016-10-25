@@ -8,7 +8,11 @@ import { Component, Input } from '@angular/core';
 
 export class AppComponent {
     constructor() {
-       this.title = "Todo list";
-       this.todos = [];
+        this.title = "Todo list";
+        this.todos = [];
     };
+
+    onTodoAdded(todo) {
+        this.todos.push(todo);
+    }
 }
