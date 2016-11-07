@@ -1,8 +1,12 @@
 export class Todo {
-    constructor(title, done = false) {
-        let now = new Date();
-        this.id = 'id' + now.getTime();
+    constructor(
+        title,
+        done = false,
+        description = null
+    ) {
+        this.id = Math.random() * 100000;
         this.title = title;
         this.done = done;
+        this.description = description;
     }
 }

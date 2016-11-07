@@ -7,7 +7,7 @@ export class TodoService {
     constructor() {
         this.todos = [
             new Todo('Title1', false),
-            new Todo('Title2', true),
+            new Todo('Title2', true, "Here are many variations of passages of Lorem Ipsum available"),
             new Todo('Title3', false)
         ];
     }
