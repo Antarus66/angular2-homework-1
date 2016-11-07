@@ -12,7 +12,7 @@ export class TodoService {
         ];
     }
 
-    getTodo(id: int) {
+    getTodo(id) {
         return this.todos.find(todo => todo.id == id);
     }
 
