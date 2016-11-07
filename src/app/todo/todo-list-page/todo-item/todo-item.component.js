@@ -3,8 +3,8 @@ import { Router } from '@angular/router';
 
 @Component({
     selector: "todo-item",
-    templateUrl: 'app/todo/todo-item/todo-item.component.html',
-    styleUrls: ['app/todo/todo-item/todo-item.component.css'],
+    templateUrl: 'app/todo/todo-list-page/todo-item/todo-item.component.html',
+    styleUrls: ['app/todo/todo-list-page/todo-item/todo-item.component.css'],
     inputs: ['todo']
 })
 

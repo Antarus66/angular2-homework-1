@@ -4,8 +4,8 @@ import { TodoService } from 'app/todo/todo.service';
 
 @Component({
     selector: "todo-form",
-    templateUrl: 'app/todo/todo-form/todo-form.component.html',
-    styleUrls: ['app/todo/todo-form/todo-form.component.css']
+    templateUrl: 'app/todo/todo-list-page/todo-form/todo-form.component.html',
+    styleUrls: ['app/todo/todo-list-page/todo-form/todo-form.component.css']
 })
 
 export class TodoFormComponent {

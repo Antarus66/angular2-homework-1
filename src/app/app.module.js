@@ -4,10 +4,10 @@ import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { TodoService } from './todo/todo.service';
-import { TodoComponent } from './todo/todo.component';
-import { TodoListComponent } from './todo/todo-list/todo-list.component';
-import { TodoFormComponent } from './todo/todo-form/todo-form.component';
-import { TodoItemComponent } from './todo/todo-item/todo-item.component';
+import { TodoComponent } from './todo/todo-list-page/todo.component.js';
+import { TodoListComponent } from './todo/todo-list-page/todo-list/todo-list.component';
+import { TodoFormComponent } from './todo/todo-list-page/todo-form/todo-form.component';
+import { TodoItemComponent } from './todo/todo-list-page/todo-item/todo-item.component';
 import { TodoDetailsComponent } from './todo/todo-details/todo-details.component';
 
 @NgModule({
