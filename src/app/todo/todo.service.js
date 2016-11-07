@@ -23,4 +23,12 @@ export class TodoService {
     addTodo(todo: Todo) {
         this.todos.push(todo);
     }
+
+    deleteTodo(id) {
+        this.todos.filter(todo => todo.id !== id);
+    }
+
+    deleteAll() {
+        throw new Error('Cannot remove all the items');
+    }
 }
