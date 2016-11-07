@@ -1,4 +1,5 @@
 import { Component, Output, EventEmitter } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
     selector: "todo-item",
@@ -10,7 +11,15 @@ import { Component, Output, EventEmitter } from '@angular/core';
 export class TodoItemComponent {
     @Output() deleted = new EventEmitter();
 
+    constructor(router: Router) {
+        this.router = router;
+    }
+
     delete() {
         this.deleted.emit(this.todo);
+    }
+
+    details() {
+        this.router.navigate(['/todo-details', this.todo.id])
     }
 }

@@ -3,6 +3,7 @@
     color: #339966;
 }
 
-.remove-button {
+.remove-button,
+.details-button {
     float: right;
 }

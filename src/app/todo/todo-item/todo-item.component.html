@@ -2,8 +2,9 @@
     <div class="ui checkbox">
         <input [checked]="todo.done" id="done" #done type="checkbox" (change)="todo.done = done.checked">
         <label [ngClass]="{selected: todo.done}">
-            <a routerLink="todo-details/1" routerLinkActive="active">{{ todo.title }}</a>
+            <a routerLink="todo-details/{{ todo.id }}" routerLinkActive="active">{{ todo.title }}</a>
         </label>
     </div>
     <button type="button" class="ui red icon button remove-button" (click)="delete()"><i class="trash outline icon"></i></button>
+    <button type="button" class="ui icon button details-button" (click)="details()"><i class="external outline icon"></i></button>
 </div>
