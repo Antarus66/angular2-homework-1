@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router, ActivatedRoute, Params } from '@angular/router';
+import { TodoService } from 'app/todo/todo.service';
 
 @Component({
     selector: "todo-details",
@@ -8,9 +9,11 @@ import { Router, ActivatedRoute, Params } from '@angular/router';
 
 export class TodoDetailsComponent {
     constructor(
+        todoService: TodoService,
         router: Router,
         route: ActivatedRoute
     ) {
+        this.todoService = todoService;
         this.router = router;
         this.route = route;
         this.todo = {};

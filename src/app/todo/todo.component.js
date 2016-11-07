@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { TodoService } from 'app/todo/todo.service';
 
 @Component({
     selector: "todo",
@@ -7,12 +8,16 @@ import { Component, Input } from '@angular/core';
 })
 
 export class TodoComponent {
-    constructor() {
-        this.title = "Todo list";
-        this.todos = [];
+    constructor(todoService: TodoService) {
+        this.todoService = todoService;
     };
 
-    onTodoAdded(todo) {
-        this.todos.push(todo);
+    ngOnInit() {
+        this.todos = this.todoService.getAll();
     }
+
+    onTodoAdded(todo) {
+        this.todoService.addTodo(todo);
+    }
+
 }
