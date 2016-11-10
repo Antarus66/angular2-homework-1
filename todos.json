@@ -2,13 +2,13 @@
   {
     "id": 1,
     "title": "Title 1",
-    "done": true,
+    "done": true
   },
   {
     "id": 2,
     "title": "Title 2",
     "done": true,
-    "descrition": "Here are many variations of passages of Lorem Ipsum available"
+    "description": "Here are many variations of passages of Lorem Ipsum available"
   },
   {
     "id": 3,

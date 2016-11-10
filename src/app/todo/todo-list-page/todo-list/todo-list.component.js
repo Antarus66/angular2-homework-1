@@ -10,10 +10,13 @@ import { TodoService } from 'app/todo/todo.service';
 export class TodoListComponent {
     constructor(todoService: TodoService) {
         this.todoService = todoService;
-    }
+        this.todos = [];
+    };
 
     ngOnInit() {
-        this.todos = this.todoService.getAll();
+        this.todoService.getAll().subscribe(todos => {
+            this.todos = todos;
+        });
     }
 
     onTodoDeleted(todo) {
@@ -27,7 +30,7 @@ export class TodoListComponent {
                 this.todos.splice(index, 1);
             }
         } catch (e) {
-            console.error('Cannot remove the todo with id: ' + id);
+            console.error('Cannot remove the todo with id: ' + id + '.', e.message);
         }
     }
 

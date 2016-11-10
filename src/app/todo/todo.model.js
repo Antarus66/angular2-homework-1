@@ -1,10 +1,11 @@
 export class Todo {
-    constructor(
+    constructor({
         title,
         done = false,
-        description = null
-    ) {
-        this.id = Math.random() * 100000;
+        description = null,
+        id = null
+    }) {
+        this.id = id || Math.random() * 100000;
         this.title = title;
         this.done = done;
         this.description = description;

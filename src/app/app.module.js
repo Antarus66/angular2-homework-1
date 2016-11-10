@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { TodoService } from './todo/todo.service';
@@ -21,6 +22,7 @@ import { TodoDetailsComponent } from './todo/todo-details/todo-details.component
       TodoDetailsComponent
   ],
   imports: [
+      HttpModule,
       BrowserModule,
       RouterModule.forRoot([
           {
