@@ -2,12 +2,13 @@
     margin: 20px auto;
 }
 
-.header {
+.header,
+.single-link,
+.description-placeholder {
     text-align: center;
 }
 
 .description-placeholder {
     font-weight: 100;
     color: #777;
-    text-align: center;
 }

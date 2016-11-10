@@ -6,8 +6,11 @@
         <div class="ui small text description" *ngIf="todo.description">{{ todo.description }}</div>
         <div class="ui small text description-placeholder" *ngIf="!todo.description">No description</div>
     </div>
-    <div class="extra content">
+    <div class="content">
         <h4 class="ui sub header green" *ngIf="todo.done">DONE</h4>
         <h4 class="ui sub header red" *ngIf="!todo.done">UNDONE</h4>
+    </div>
+    <div class="extra content single-link">
+        <a [routerLink]="['/home']" routerLinkActive="active">home</a>
     </div>
 </div>

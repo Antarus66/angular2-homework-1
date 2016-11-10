@@ -29,6 +29,9 @@ import { TodoDetailsComponent } from './todo/todo-details/todo-details.component
               path: 'todo-details/:id',
               component: TodoDetailsComponent
           }, {
+              path: 'home',
+              component: TodoComponent
+          }, {
               path: '',
               component: TodoComponent
           }, {
