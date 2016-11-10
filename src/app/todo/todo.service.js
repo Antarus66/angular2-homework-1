@@ -33,15 +33,14 @@ export class TodoService {
     }
 
     deleteAll() {
-        throw new Error('Cannot remove all the items');
+        throw new Error('Cannot remove all the items: I don\'t like that');
     }
 
     loadTodoCollection(res) {
         let data = res.json();
-        let todos = data.map(todo => new Todo(todo));
-        this.todos = todos;
+        this.todos = data.map(todo => new Todo(todo));
 
-        return todos;
+        return this.todos;
     }
 
     handleError(error) {

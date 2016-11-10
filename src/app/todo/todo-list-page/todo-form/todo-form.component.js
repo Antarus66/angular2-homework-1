@@ -18,7 +18,7 @@ export class TodoFormComponent {
             return;
         }
 
-        let todo = new Todo(title);
+        let todo = new Todo({title: title});
         this.todoService.addTodo(todo);
     }
 }
